@@ -1,0 +1,18 @@
+﻿<Page x:Class="Glass.InicioSesion"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Glass"
+      mc:Ignorable="d"
+      Title="InicioSesion" Height="111.702" Width="281.383">
+
+    <Grid>
+        <Label Content="RUT" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="69"/>
+        <TextBox x:Name="txtRut" HorizontalAlignment="Left" Height="26" Margin="84,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
+        <Label Content="Contraseña" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="txtPass" HorizontalAlignment="Left" Height="26" Margin="84,41,0,0"  VerticalAlignment="Top" Width="180"/>
+        <Button Content="Iniciar" HorizontalAlignment="Left" Margin="189,72,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="Button_Click"/>
+
+    </Grid>
+</Page>
