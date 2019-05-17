@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:Glass"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <FontFamily x:Key="faBrand">/Fonts/fa-brands-400.ttf#Font Awesome 5 Brands Regular</FontFamily>
+        <FontFamily x:Key="faRegular">/Fonts/fa-regular-400.ttf#Font Awesome 5 Free Regular</FontFamily>
+        <FontFamily x:Key="faSolid">/Fonts/fa-solid-900.ttf#Font Awesome 5 Free Solid</FontFamily>
     </Application.Resources>
 </Application>

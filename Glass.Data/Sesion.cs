@@ -9,5 +9,6 @@ namespace Glass.Data
     public class Sesion
     {
         public String Token { get; set; }
+        public Int32 Rol { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Glass.Data;
 using System;
 using System.Windows;
+using System.Windows.Navigation;
 
 namespace Glass
 {
@@ -11,6 +12,9 @@ namespace Glass
     {
         private const String UrlFox = "http://sheemin.club/api/v1";
 
+        public readonly Boolean IsMock = true;
+        public readonly Int32 RolMock = 2;
+
         public ContextoServicio Contexto { get; }
         public Sesion Sesion { get; }
 
@@ -20,8 +24,10 @@ namespace Glass
             Sesion = new Sesion();
 
             InitializeComponent();
-            this.SizeToContent = SizeToContent.WidthAndHeight;
-            this.ResizeMode = ResizeMode.NoResize;
+            SizeToContent = SizeToContent.WidthAndHeight;
+            ResizeMode = ResizeMode.NoResize;
+
+            NavFrame.NavigationUIVisibility = NavigationUIVisibility.Hidden;
 
             NavFrame.Navigate(new InicioSesion(this));
         }
