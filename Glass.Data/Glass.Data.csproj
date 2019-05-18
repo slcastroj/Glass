@@ -46,9 +46,11 @@
   <ItemGroup>
     <Compile Include="ContextoServicio.cs" />
     <Compile Include="Dto\Compra.cs" />
+    <Compile Include="Dto\EstadoCompra.cs" />
     <Compile Include="Dto\Laboratorio.cs" />
     <Compile Include="Dto\Producto.cs" />
     <Compile Include="Dto\Reserva.cs" />
+    <Compile Include="Dto\TipoProducto.cs" />
     <Compile Include="Dto\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sesion.cs" />
