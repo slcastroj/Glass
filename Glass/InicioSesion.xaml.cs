@@ -56,6 +56,11 @@ namespace Glass
 
 			if (rol == 1) { Window.NavFrame.Navigate(new MenuFarmaceutico(Window)); }
 			else if (rol == 2) { Window.NavFrame.Navigate(new MenuAdministrador(Window)); }
+			else
+			{
+				MessageBox.Show("Inicie sesión como administrador o farmacéutico");
+				Window.Sesion.Clear();
+			}
 		}
 
 		private void Page_Loaded(Object sender, RoutedEventArgs e)

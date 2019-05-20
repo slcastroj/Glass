@@ -47,13 +47,29 @@ namespace Glass.Views.Admin
 		{
 			var rq = Window.Contexto.Request("reserva");
 
+			var rqC = Window.Contexto.Request("compra");
+			rqC.AddHeader("Authorization", $"Bearer {Window.Sesion.Token}");
+			var compras = Window.Contexto.Response<List<Data.Dto.Compra.Get>>(rqC).Data;
+
+			var estados = Window.Contexto.Data<List<Data.Dto.EstadoCompra.Get>>("estadocompra");
+
 			rq.AddParameter("usuario", tbUsuarioGet.Text);
 			rq.AddParameter("producto", tbProductoGet.Text);
 			rq.AddParameter("estado", ((EstadoCompra.Get)cbEstadoGet.SelectedItem)?.Id);
 			rq.AddHeader("Authorization", $"Bearer {Window.Sesion.Token}");
 
 			var reservas = Window.Contexto.Response<List<Reserva.Get>>(rq).Data;
-			gridReservas.ItemsSource = reservas;
+				
+
+			gridReservas.ItemsSource = reservas.Select(x => new {
+				x.Id,
+				x.Usuario,
+				EstaPagado = compras?.Any(y => 
+					y.Reserva.Id == x.Id &&
+					estados.Find(z => z.Id == y.Estado).Nombre == "Aprobado"
+					) ?? false,
+				x.Reservas
+			});
 		}
 
 		private void Button_Click_1(Object sender, RoutedEventArgs e)

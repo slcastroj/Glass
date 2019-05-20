@@ -14,7 +14,7 @@ namespace Glass.Data.Dto.Producto
         public Boolean NecesitaReceta { get; set; }
         public Int32 PrecioUnidad { get; set; }
         public Int32 MaximoSemanal { get; set; }
-        public Int32 PesoGramo { get; set; }
+        public Int32 PesoGr { get; set; }
         public Int32 Laboratorio { get; set; }
         public Int32 Tipo { get; set; }
         public Int32 Stock { get; set; }

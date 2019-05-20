@@ -16,31 +16,20 @@
         <TabControl HorizontalAlignment="Left" Height="205" VerticalAlignment="Top" Width="780" Margin="10,10,0,0">
             <TabItem Header="Agregar">
                 <Grid Background="#FFE5E5E5">
-                    <Button Content="Agregar" HorizontalAlignment="Left" Margin="663,140,0,0" VerticalAlignment="Top" Width="101" Height="27"/>
+                    <Button Content="Agregar" HorizontalAlignment="Left" Margin="663,140,0,0" VerticalAlignment="Top" Width="101" Height="27" Click="Button_Click"/>
                     <Label Content="Nombre laboratorio:" HorizontalAlignment="Left" Margin="36,33,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Dirección:" HorizontalAlignment="Left" Margin="36,64,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="159,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="159,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Modificar">
-                <Grid Background="#FFE5E5E5">
-                    <Button Content="Modificar" HorizontalAlignment="Left" Margin="663,140,0,0" VerticalAlignment="Top" Width="101" Height="27"/>
-                    <Label Content="Nombre laboratorio:" HorizontalAlignment="Left" Margin="36,33,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Dirección:" HorizontalAlignment="Left" Margin="36,64,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="159,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="159,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="tbNombre" HorizontalAlignment="Left" Height="26" Margin="159,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Eliminar">
                 <Grid Background="#FFE5E5E5">
                     <Label Content="Seleccione un item para elimiinarlo." HorizontalAlignment="Left" Margin="179,49,0,0" VerticalAlignment="Top" FontSize="16"/>
                     <Label Content="Esta acción no se podrá deshacer." HorizontalAlignment="Left" Margin="179,80,0,0" VerticalAlignment="Top"/>
-                    <Button Content="Eliminar" HorizontalAlignment="Left" Margin="650,138,0,0" VerticalAlignment="Top" Width="114" Height="29"/>
+                    <Button Content="Eliminar" HorizontalAlignment="Left" Margin="650,138,0,0" VerticalAlignment="Top" Width="114" Height="29" Click="Button_Click_1"/>
                 </Grid>
             </TabItem>
         </TabControl>
-        <DataGrid HorizontalAlignment="Left" Height="215" Grid.Row="1" VerticalAlignment="Top" Width="780" Margin="10,0,0,0"/>
+        <DataGrid IsReadOnly="True" x:Name="gridLabs" HorizontalAlignment="Left" Height="215" Grid.Row="1" VerticalAlignment="Top" Width="780" Margin="10,0,0,0"/>
         <Button Content="Atrás" HorizontalAlignment="Left" Margin="715,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_4"/>
     </Grid>
 </Page>

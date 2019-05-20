@@ -36,17 +36,17 @@ namespace Glass.Views
 
 		private void Button_Click_1(Object sender, RoutedEventArgs e)
 		{
-			Window.NavFrame.Navigate(new Productos_admin(Window));
+			Window.NavFrame.Navigate(new Usuarios_admin(Window));
 		}
 
 		private void Button_Click_2(Object sender, RoutedEventArgs e)
 		{
-			Window.NavFrame.Navigate(new Usuarios_admin(Window));
+			Window.NavFrame.Navigate(new Reservas_admin(Window));
 		}
 
 		private void Button_Click_3(Object sender, RoutedEventArgs e)
 		{
-			Window.NavFrame.Navigate(new Reservas_admin(Window));
+			Window.NavFrame.Navigate(new Productos_admin(Window));
 		}
 
 		private void Button_Click_4(Object sender, RoutedEventArgs e)

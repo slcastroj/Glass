@@ -11,8 +11,8 @@ namespace Glass.Data.Dto.Reserva
         public Int32 Compra
         {get; set;}
         public List<ReservaStock> Reservas
-        {get; set;}
-    }
+		{ get; set; }
+	}
     
     public class Post
     {
