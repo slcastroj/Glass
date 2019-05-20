@@ -19,11 +19,14 @@ namespace Glass.Data
             Client = new RestClient(url);
         }
 
-        public T Data<T>(String uri,
-            Method method = Method.GET,
-            Object body = null) where T : new() => Response<T>(uri, method, body).Data;
+		public T Data<T>(String uri,
+			Method method = Method.GET,
+			Object body = null) where T : new()
+		{
+			return Response<T>(uri, method, body).Data;
+		}
 
-        public IRestRequest Request(String uri,
+		public IRestRequest Request(String uri,
             Method method = Method.GET,
             Object body = null)
         {
@@ -32,10 +35,16 @@ namespace Glass.Data
             return rq;
         }
 
-        public IRestResponse<T> Response<T>(String uri,
-            Method method = Method.GET,
-            Object body = null) where T : new() => Response<T>(Request(uri, method, body));
+		public IRestResponse<T> Response<T>(String uri,
+			Method method = Method.GET,
+			Object body = null) where T : new()
+		{
+			return Response<T>(Request(uri, method, body));
+		}
 
-        public IRestResponse<T> Response<T>(IRestRequest rq) where T : new() => Client.Execute<T>(rq);
-    }
+		public IRestResponse<T> Response<T>(IRestRequest rq) where T : new()
+		{
+			return Client.Execute<T>(rq);
+		}
+	}
 }

@@ -14,23 +14,23 @@ namespace Glass
     public partial class InicioSesion : Page
     {
         private MainWindow Window { get; }
+
         public InicioSesion(MainWindow w)
         {
             Window = w;
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(Object sender, RoutedEventArgs e)
         {
-            Int32 rol = 0;
-
-            if(Window.IsMock)
+			Int32 rol;
+			if (Window.IsMock)
             {
                 rol = Window.RolMock;
             }
             else
             {
-                var data = Window.Contexto.Data<Usuario.Auth>(
+				Usuario.Auth data = Window.Contexto.Data<Usuario.Auth>(
                 "usuario/autenticacion",
                 Method.POST,
                 new
@@ -41,11 +41,14 @@ namespace Glass
 
                 Window.Sesion.Token = data.Token;
 
-                rol = Window.Contexto.Data<Usuario.Get>($"usuario/{data.Rut}").Rol;
+				IRestRequest rq = Window.Contexto.Request($"usuario/{data.Rut}");
+				rq.AddHeader("Authorization", $"Bearer {Window.Sesion.Token}");
+				rol = Window.Contexto.Response<Usuario.Get>(rq).Data.Rol;
                 Window.Sesion.Rol = rol;
             }
 
-            if(rol == 2) { Window.NavFrame.Navigate(new MenuFarmaceutico(Window)); }
+            if(rol == 1) { Window.NavFrame.Navigate(new MenuFarmaceutico(Window)); }
+			else if(rol == 2) { Window.NavFrame.Navigate(new MenuAdministrador(Window)); }
         }
     }
 }

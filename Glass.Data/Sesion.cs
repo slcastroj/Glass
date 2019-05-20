@@ -10,5 +10,11 @@ namespace Glass.Data
     {
         public String Token { get; set; }
         public Int32 Rol { get; set; }
+
+		public void Clear()
+		{
+			Token = default;
+			Rol = default;
+		}
     }
 }

@@ -18,11 +18,10 @@ namespace Glass.Views
     /// <summary>
     /// Lógica de interacción para MenuFarmaceutico.xaml
     /// </summary>
-    public partial class MenuFarmaceutico : Page
+    public partial class MenuAdministrador : Page
     {
         private MainWindow Window { get; }
-
-        public MenuFarmaceutico(MainWindow w)
+        public MenuAdministrador(MainWindow w)
         {
             Window = w;
             InitializeComponent();

@@ -58,6 +58,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\MenuAdministrador.xaml.cs">
+      <DependentUpon>MenuAdministrador.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MenuFarmaceutico.xaml.cs">
       <DependentUpon>MenuFarmaceutico.xaml</DependentUpon>
     </Compile>
@@ -80,6 +83,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\MenuAdministrador.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\MenuFarmaceutico.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
