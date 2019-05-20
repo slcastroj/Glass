@@ -58,6 +58,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\Admin\Compras_admin.xaml.cs">
+      <DependentUpon>Compras_admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Laboratorios_admin.xaml.cs">
+      <DependentUpon>Laboratorios_admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Productos_admin.xaml.cs">
+      <DependentUpon>Productos_admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Reservas_admin.xaml.cs">
+      <DependentUpon>Reservas_admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Usuarios_admin.xaml.cs">
+      <DependentUpon>Usuarios_admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Farmaceutico\Productos_farm.xaml.cs">
+      <DependentUpon>Productos_farm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Farmaceutico\Reservas_farm.xaml.cs">
+      <DependentUpon>Reservas_farm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Farmaceutico\Usuarios_farm.xaml.cs">
+      <DependentUpon>Usuarios_farm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MenuFarmaceutico.xaml.cs">
       <DependentUpon>MenuFarmaceutico.xaml</DependentUpon>
     </Compile>
@@ -80,6 +104,38 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Admin\Compras_admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin\Laboratorios_admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin\Productos_admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin\Reservas_admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin\Usuarios_admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Farmaceutico\Productos_farm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Farmaceutico\Reservas_farm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Farmaceutico\Usuarios_farm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MenuFarmaceutico.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
