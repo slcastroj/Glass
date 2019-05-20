@@ -82,8 +82,14 @@
     <Compile Include="Views\Farmaceutico\Usuarios_farm.xaml.cs">
       <DependentUpon>Usuarios_farm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MenuAdministrador.xaml.cs">
+      <DependentUpon>MenuAdministrador.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MenuFarmaceutico.xaml.cs">
       <DependentUpon>MenuFarmaceutico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Productos.xaml.cs">
+      <DependentUpon>Productos.xaml</DependentUpon>
     </Compile>
     <Page Include="InicioSesion.xaml">
       <SubType>Designer</SubType>
@@ -113,16 +119,16 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Admin\Productos_admin.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Admin\Reservas_admin.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Admin\Usuarios_admin.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Farmaceutico\Productos_farm.xaml">
       <SubType>Designer</SubType>
@@ -136,9 +142,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\MenuAdministrador.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\MenuFarmaceutico.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Productos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

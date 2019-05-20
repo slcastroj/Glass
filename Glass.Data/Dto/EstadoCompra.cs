@@ -10,7 +10,12 @@ namespace Glass.Data.Dto.EstadoCompra
     {
         public Int32 Id { get; set; }
         public String Nombre { get; set; }
-    }
+
+		public override String ToString()
+		{
+			return Nombre;
+		}
+	}
     public class Post
     {
         public Int32 Id { get; set; }

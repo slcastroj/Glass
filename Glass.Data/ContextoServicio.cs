@@ -44,7 +44,8 @@ namespace Glass.Data
 
 		public IRestResponse<T> Response<T>(IRestRequest rq) where T : new()
 		{
-			return Client.Execute<T>(rq);
+			var r = Client.Execute<T>(rq);
+			return r;
 		}
 	}
 }

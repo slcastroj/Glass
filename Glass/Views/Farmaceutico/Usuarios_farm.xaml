@@ -17,47 +17,47 @@
             <TabItem Header="Buscar">
                 <Grid Background="#FFE5E5E5">
                     <Label Content="Rut:" HorizontalAlignment="Left" Margin="22,52,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="74,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149"/>
-                    <Label Content="Correo:" HorizontalAlignment="Left" Margin="22,112,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="74,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149"/>
-                    <Label Content="Fecha de nacimiento:" HorizontalAlignment="Left" Margin="268,52,0,0" VerticalAlignment="Top"/>
-                    <DatePicker HorizontalAlignment="Left" Margin="395,52,0,0" VerticalAlignment="Top" Height="26" Width="131"/>
-                    <Button Content="Buscar" HorizontalAlignment="Left" Margin="663,140,0,0" VerticalAlignment="Top" Width="101" Height="27"/>
-                    <Label Content="Tipo de usuario (Rol):" HorizontalAlignment="Left" Margin="268,112,0,0" VerticalAlignment="Top"/>
-                    <ComboBox HorizontalAlignment="Left" Height="26" Margin="395,112,0,0" VerticalAlignment="Top" Width="131"/>
+                    <TextBox x:Name="tbRutGet" HorizontalAlignment="Left" Height="26" Margin="74,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149"/>
+                    <Button Content="Buscar" HorizontalAlignment="Left" Margin="663,140,0,0" VerticalAlignment="Top" Width="101" Height="27" Click="Button_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Agregar">
                 <Grid Background="#FFE5E5E5">
                     <Label Content="Rut:" HorizontalAlignment="Left" Margin="22,52,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="74,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149"/>
+                    <TextBox x:Name="tbRutPost" HorizontalAlignment="Left" Height="26" Margin="74,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149"/>
                     <Label Content="Correo:" HorizontalAlignment="Left" Margin="22,112,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="74,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149"/>
-                    <Label Content="Fecha de nacimiento:" HorizontalAlignment="Left" Margin="268,52,0,0" VerticalAlignment="Top"/>
-                    <DatePicker HorizontalAlignment="Left" Margin="395,52,0,0" VerticalAlignment="Top" Height="26" Width="131"/>
-                    <Button Content="Agregar" HorizontalAlignment="Left" Margin="663,140,0,0" VerticalAlignment="Top" Width="101" Height="27"/>
+                    <TextBox x:Name="tbEmailPost" HorizontalAlignment="Left" Height="26" Margin="74,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149"/>
+                    <Label Content="Fecha de nacimiento:" HorizontalAlignment="Left" Margin="269,112,0,0" VerticalAlignment="Top"/>
+                    <DatePicker x:Name="dpFechaPost" HorizontalAlignment="Left" Margin="396,112,0,0" VerticalAlignment="Top" Height="26" Width="131"/>
+                    <Button Content="Agregar" HorizontalAlignment="Left" Margin="663,140,0,0" VerticalAlignment="Top" Width="101" Height="27" Click="Button_Click_1"/>
+                    <Label Content="Nombre:" HorizontalAlignment="Left" Margin="268,52,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="tbNombrePost" HorizontalAlignment="Left" Height="26" Margin="329,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149"/>
+                    <Label Content="Contraseña:" HorizontalAlignment="Left" Margin="543,52,0,0" VerticalAlignment="Top"/>
+                    <PasswordBox x:Name="pbPasswordPost" HorizontalAlignment="Left" Height="26" Margin="615,52,0,0"  VerticalAlignment="Top" Width="149"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Modificar">
                 <Grid Background="#FFE5E5E5">
                     <Label Content="Correo:" HorizontalAlignment="Left" Margin="22,52,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="99,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149"/>
+                    <TextBox x:Name="tbEmailPatch" HorizontalAlignment="Left" Height="26" Margin="99,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149"/>
                     <Label Content="Contraseña:" HorizontalAlignment="Left" Margin="22,112,0,0" VerticalAlignment="Top"/>
-                    <PasswordBox HorizontalAlignment="Left" Height="26" Margin="99,112,0,0" VerticalAlignment="Top" Width="149"/>
+                    <PasswordBox x:Name="tbPassPatch" HorizontalAlignment="Left" Height="26" Margin="99,112,0,0" VerticalAlignment="Top" Width="149"/>
                     <Label Content="Fecha de nacimiento:" HorizontalAlignment="Left" Margin="292,52,0,0" VerticalAlignment="Top"/>
-                    <DatePicker HorizontalAlignment="Left" Margin="419,52,0,0" VerticalAlignment="Top" Height="26" Width="131"/>
-                    <Button Content="Modificar" HorizontalAlignment="Left" Margin="663,140,0,0" VerticalAlignment="Top" Width="101" Height="27"/>
+                    <DatePicker x:Name="dpFechaPatch" HorizontalAlignment="Left" Margin="419,52,0,0" VerticalAlignment="Top" Height="26" Width="131"/>
+                    <Button Content="Modificar" HorizontalAlignment="Left" Margin="663,140,0,0" VerticalAlignment="Top" Width="101" Height="27" Click="Button_Click_2"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Eliminar">
                 <Grid Background="#FFE5E5E5">
                     <Label Content="Seleccione un item para elimiinarlo." HorizontalAlignment="Left" Margin="179,49,0,0" VerticalAlignment="Top" FontSize="16"/>
                     <Label Content="Esta acción no se podrá deshacer." HorizontalAlignment="Left" Margin="179,80,0,0" VerticalAlignment="Top"/>
-                    <Button Content="Eliminar" HorizontalAlignment="Left" Margin="650,138,0,0" VerticalAlignment="Top" Width="114" Height="29"/>
+                    <Button Content="Eliminar" HorizontalAlignment="Left" Margin="650,138,0,0" VerticalAlignment="Top" Width="114" Height="29" Click="Button_Click_3"/>
                 </Grid>
             </TabItem>
+            
         </TabControl>
-        <DataGrid HorizontalAlignment="Left" Height="215" Grid.Row="1" VerticalAlignment="Top" Width="780" Margin="10,0,0,0"/>
+        <DataGrid IsReadOnly="True" x:Name="gridUsuarios" HorizontalAlignment="Left" Height="215" Grid.Row="1" VerticalAlignment="Top" Width="780" Margin="10,0,0,0"/>
+        <Button Content="Atrás" HorizontalAlignment="Left" Margin="715,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_4"/>
 
     </Grid>
 </Page>

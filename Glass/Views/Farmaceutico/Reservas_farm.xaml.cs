@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestSharp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using EstadoCompra = Glass.Data.Dto.EstadoCompra;
+using Reserva = Glass.Data.Dto.Reserva;
+
 namespace Glass.Views.Farmaceutico
 {
     /// <summary>
@@ -20,9 +24,52 @@ namespace Glass.Views.Farmaceutico
     /// </summary>
     public partial class Reservas_farm : Page
     {
-        public Reservas_farm()
-        {
-            InitializeComponent();
-        }
-    }
+		private MainWindow Window { get; }
+
+		public Reservas_farm(MainWindow w)
+		{
+			Window = w;
+			InitializeComponent();
+
+			var estados = Window.Contexto.Data<List<EstadoCompra.Get>>("estadocompra");
+
+			cbEstadoGet.ItemsSource = estados;
+
+			Button_Click(this, null);
+		}
+
+		private void Button_Click_4(Object sender, RoutedEventArgs e)
+		{
+			Window.NavFrame.GoBack();
+		}
+
+		private void Button_Click(Object sender, RoutedEventArgs e)
+		{
+			var rq = Window.Contexto.Request("reserva");
+
+			rq.AddParameter("usuario", tbUsuarioGet.Text);
+			rq.AddParameter("producto", tbProductoGet.Text);
+			rq.AddParameter("estado", ((EstadoCompra.Get)cbEstadoGet.SelectedItem)?.Id);
+			rq.AddHeader("Authorization", $"Bearer {Window.Sesion.Token}");
+
+			var reservas = Window.Contexto.Response<List<Reserva.Get>>(rq).Data;
+			gridReservas.ItemsSource = reservas;
+		}
+
+		private void Button_Click_1(Object sender, RoutedEventArgs e)
+		{
+			var res = (Reserva.Get)gridReservas.SelectedItem;
+			if (res == null)
+			{
+				MessageBox.Show("Seleccione un elemento de la lista");
+				return;
+			}
+
+			var rq = Window.Contexto.Request($"reserva/{res.Id}", Method.DELETE);
+			rq.AddHeader("Authorization", $"Bearer {Window.Sesion.Token}");
+			Window.Contexto.Response<Object>(rq);
+
+			Button_Click(this, null);
+		}
+	}
 }

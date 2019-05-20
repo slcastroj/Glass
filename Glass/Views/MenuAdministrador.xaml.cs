@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Glass.Views.Admin;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,31 @@ namespace Glass.Views
 		{
 			Window.Sesion.Clear();
 			Window.NavFrame.GoBack();
+		}
+
+		private void Button_Click_1(Object sender, RoutedEventArgs e)
+		{
+			Window.NavFrame.Navigate(new Productos_admin(Window));
+		}
+
+		private void Button_Click_2(Object sender, RoutedEventArgs e)
+		{
+			Window.NavFrame.Navigate(new Usuarios_admin(Window));
+		}
+
+		private void Button_Click_3(Object sender, RoutedEventArgs e)
+		{
+			Window.NavFrame.Navigate(new Reservas_admin(Window));
+		}
+
+		private void Button_Click_4(Object sender, RoutedEventArgs e)
+		{
+			Window.NavFrame.Navigate(new Laboratorios_admin(Window));
+		}
+
+		private void Button_Click_5(Object sender, RoutedEventArgs e)
+		{
+			Window.NavFrame.Navigate(new Compras_admin(Window));
 		}
 	}
 }

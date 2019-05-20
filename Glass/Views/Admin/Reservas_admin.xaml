@@ -3,10 +3,10 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Glass.Views.Admin"
+      xmlns:local="clr-namespace:Glass.Views.Farmaceutico"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Reservas_admin">
+      Title="Reservas_farm">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -16,21 +16,25 @@
         <TabControl HorizontalAlignment="Left" Height="205" VerticalAlignment="Top" Width="780" Margin="10,10,0,0">
             <TabItem Header="Buscar">
                 <Grid Background="#FFE5E5E5">
-                    <Label Content="Fecha de reserva:" HorizontalAlignment="Left" Margin="22,52,0,0" VerticalAlignment="Top"/>
-                    <DatePicker HorizontalAlignment="Left" Margin="128,52,0,0" VerticalAlignment="Top" Height="26"/>
-                    <Label Content="Usuario:" HorizontalAlignment="Left" Margin="22,112,0,0" VerticalAlignment="Top"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="128,112,0,0" VerticalAlignment="Top" Width="145" Height="26"/>
-                    <Button Content="Buscar" HorizontalAlignment="Left" Margin="663,140,0,0" VerticalAlignment="Top" Width="101" Height="27"/>
+                    <Label Content="Estado:" HorizontalAlignment="Left" Margin="22,112,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="cbEstadoGet" HorizontalAlignment="Left" Margin="128,112,0,0" VerticalAlignment="Top" Width="145" Height="26"/>
+                    <Button Content="Buscar" HorizontalAlignment="Left" Margin="663,140,0,0" VerticalAlignment="Top" Width="101" Height="27" Click="Button_Click"/>
+                    <Label Content="Producto" HorizontalAlignment="Left" Margin="22,81,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="tbProductoGet" HorizontalAlignment="Left" Margin="128,81,0,0" VerticalAlignment="Top" Width="145" Height="26"/>
+                    <Label Content="Usuario:" HorizontalAlignment="Left" Margin="22,50,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="tbUsuarioGet" HorizontalAlignment="Left" Margin="128,50,0,0" VerticalAlignment="Top" Width="145" Height="26"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Eliminar">
                 <Grid Background="#FFE5E5E5">
                     <Label Content="Seleccione un item para elimiinarlo." HorizontalAlignment="Left" Margin="179,49,0,0" VerticalAlignment="Top" FontSize="16"/>
                     <Label Content="Esta acción no se podrá deshacer." HorizontalAlignment="Left" Margin="179,80,0,0" VerticalAlignment="Top"/>
-                    <Button Content="Eliminar" HorizontalAlignment="Left" Margin="650,138,0,0" VerticalAlignment="Top" Width="114" Height="29"/>
+                    <Button Content="Eliminar" HorizontalAlignment="Left" Margin="650,138,0,0" VerticalAlignment="Top" Width="114" Height="29" Click="Button_Click_1"/>
                 </Grid>
             </TabItem>
         </TabControl>
-        <DataGrid HorizontalAlignment="Left" Height="215" Grid.Row="1" VerticalAlignment="Top" Width="780" Margin="10,0,0,0"/>
+        <DataGrid IsReadOnly="True" x:Name="gridReservas" HorizontalAlignment="Left" Height="215" Grid.Row="1" VerticalAlignment="Top" Width="780" Margin="10,0,0,0"/>
+        <Button Content="Atrás" HorizontalAlignment="Left" Margin="715,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_4"/>
+
     </Grid>
 </Page>

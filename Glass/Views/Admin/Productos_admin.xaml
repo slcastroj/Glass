@@ -3,10 +3,10 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Glass.Views.Admin"
+      xmlns:local="clr-namespace:Glass.Views.Farmaceutico"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Productos_admin">
+      Title="Productos_farm">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -17,20 +17,20 @@
             <TabItem Header="Buscar">
                 <Grid Background="#FFE5E5E5">
                     <Label Content="Nombre:" HorizontalAlignment="Left" Margin="22,34,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="115,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="127"/>
+                    <TextBox x:Name="tbNombre" HorizontalAlignment="Left" Height="26" Margin="115,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="127"/>
                     <Label Content="Laboratorio:" HorizontalAlignment="Left" Margin="278,65,0,0" VerticalAlignment="Top"/>
                     <Label Content="Tipo producto:" HorizontalAlignment="Left" Margin="278,34,0,0" VerticalAlignment="Top"/>
-                    <Button Content="Buscar" HorizontalAlignment="Left" Margin="663,168,0,0" VerticalAlignment="Top" Width="101" Height="27"/>
-                    <CheckBox Content="Con receta" HorizontalAlignment="Left" Margin="22,76,0,0" VerticalAlignment="Top"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="372,34,0,0" VerticalAlignment="Top" Width="126" Height="26"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="372,65,0,0" VerticalAlignment="Top" Width="126" Height="26"/>
+                    <Button Content="Buscar" HorizontalAlignment="Left" Margin="663,168,0,0" VerticalAlignment="Top" Width="101" Height="27" Click="Button_Click"/>
+                    <CheckBox x:Name="chkStock" Content="Tiene stock" HorizontalAlignment="Left" Margin="22,76,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="cbTipo" HorizontalAlignment="Left" Margin="372,34,0,0" VerticalAlignment="Top" Width="126" Height="26"/>
+                    <ComboBox x:Name="cbLab" HorizontalAlignment="Left" Margin="372,65,0,0" VerticalAlignment="Top" Width="126" Height="26"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Agregar">
                 <Grid Background="#FFE5E5E5">
-                    <Button Content="Agregar" HorizontalAlignment="Left" Margin="663,168,0,0" VerticalAlignment="Top" Width="101" Height="27"/>
+                    <Button Content="Agregar" HorizontalAlignment="Left" Margin="663,168,0,0" VerticalAlignment="Top" Width="101" Height="27" Click="Button_Click_1"/>
                     <Label Content="Nombre:" HorizontalAlignment="Left" Margin="19,19,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="103,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <TextBox x:Name="tbNombrePost" HorizontalAlignment="Left" Height="26" Margin="103,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
                     <Label Content="Descripción:" HorizontalAlignment="Left" Margin="21,81,0,0" VerticalAlignment="Top"/>
                     <Label Content="Máx. semanal:" HorizontalAlignment="Left" Margin="287,112,0,0" VerticalAlignment="Top"/>
                     <Label Content="Stock:" HorizontalAlignment="Left" Margin="287,19,0,0" VerticalAlignment="Top"/>
@@ -38,50 +38,47 @@
                     <Label Content="Precio:" HorizontalAlignment="Left" Margin="287,81,0,0" VerticalAlignment="Top"/>
                     <Label Content="Laboratorio:" HorizontalAlignment="Left" Margin="485,50,0,0" VerticalAlignment="Top"/>
                     <Label Content="Tipo producto:" HorizontalAlignment="Left" Margin="485,19,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Con receta" HorizontalAlignment="Left" Margin="21,56,0,0" VerticalAlignment="Top"/>
-                    <TextBlock HorizontalAlignment="Left" Height="99" Margin="103,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}">
-                        <TextBlock.OpacityMask>
-                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
-                        </TextBlock.OpacityMask>
-                    </TextBlock>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="391,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="391,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="391,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="391,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="578,19,0,0" VerticalAlignment="Top" Width="107" Height="26"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="578,50,0,0" VerticalAlignment="Top" Width="107" Height="26"/>
+                    <CheckBox x:Name="chkRecetaPost" Content="Con receta" HorizontalAlignment="Left" Margin="21,56,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="tbDescPost" HorizontalAlignment="Left" Height="99" Margin="103,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}"/>
+                    <TextBox x:Name="tbStockPost" HorizontalAlignment="Left" Height="26" Margin="391,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74"/>
+                    <TextBox x:Name="tbPesoPost" HorizontalAlignment="Left" Height="26" Margin="391,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74"/>
+                    <TextBox x:Name="tbPrecioPost" HorizontalAlignment="Left" Height="26" Margin="391,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74"/>
+                    <TextBox x:Name="tbMaxPost" HorizontalAlignment="Left" Height="26" Margin="391,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74"/>
+                    <ComboBox x:Name="cbTipoPost" HorizontalAlignment="Left" Margin="578,19,0,0" VerticalAlignment="Top" Width="107" Height="26"/>
+                    <ComboBox x:Name="cbLabPost" HorizontalAlignment="Left" Margin="578,50,0,0" VerticalAlignment="Top" Width="107" Height="26"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Modificar">
                 <Grid Background="#FFE5E5E5">
-                    <Button Content="Modificar" HorizontalAlignment="Left" Margin="663,168,0,0" VerticalAlignment="Top" Width="101" Height="27"/>
+                    <Button Content="Modificar" HorizontalAlignment="Left" Margin="663,168,0,0" VerticalAlignment="Top" Width="101" Height="27" Click="Button_Click_2"/>
                     <Label Content="Nombre:" HorizontalAlignment="Left" Margin="19,21,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="103,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <TextBox x:Name="tbNombrePut" HorizontalAlignment="Left" Height="26" Margin="103,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
                     <Label Content="Descripción:" HorizontalAlignment="Left" Margin="21,83,0,0" VerticalAlignment="Top"/>
                     <Label Content="Máx. semanal:" HorizontalAlignment="Left" Margin="287,113,0,0" VerticalAlignment="Top"/>
                     <Label Content="Stock:" HorizontalAlignment="Left" Margin="287,21,0,0" VerticalAlignment="Top"/>
                     <Label Content="Peso(g):" HorizontalAlignment="Left" Margin="287,51,0,0" VerticalAlignment="Top"/>
                     <Label Content="Precio:" HorizontalAlignment="Left" Margin="287,83,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Con receta" HorizontalAlignment="Left" Margin="21,57,0,0" VerticalAlignment="Top"/>
-                    <TextBlock HorizontalAlignment="Left" Height="98" Margin="103,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}">
-                        <TextBlock.OpacityMask>
-                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
-                        </TextBlock.OpacityMask>
-                    </TextBlock>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="391,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="391,51,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="391,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="391,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74"/>
+                    <CheckBox x:Name="chkRecetaPut" Content="Con receta" HorizontalAlignment="Left" Margin="21,57,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="tbDescPut" HorizontalAlignment="Left" Height="98" Margin="103,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}"/>
+                    <TextBox x:Name="tbStockPut" HorizontalAlignment="Left" Height="26" Margin="391,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74"/>
+                    <TextBox x:Name="tbPesoPut" HorizontalAlignment="Left" Height="26" Margin="391,51,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74"/>
+                    <TextBox x:Name="tbPrecioPut" HorizontalAlignment="Left" Height="26" Margin="391,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74"/>
+                    <TextBox x:Name="tbMaxPut" HorizontalAlignment="Left" Height="26" Margin="391,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74"/>
+                    <Label Content="Laboratorio:" HorizontalAlignment="Left" Margin="485,50,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Tipo producto:" HorizontalAlignment="Left" Margin="485,19,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="cbTipoPut" HorizontalAlignment="Left" Margin="578,19,0,0" VerticalAlignment="Top" Width="107" Height="26"/>
+                    <ComboBox x:Name="cbLabPut" HorizontalAlignment="Left" Margin="578,50,0,0" VerticalAlignment="Top" Width="107" Height="26"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Eliminar">
                 <Grid Background="#FFE5E5E5">
                     <Label Content="Seleccione un item para elimiinarlo." HorizontalAlignment="Left" Margin="179,49,0,0" VerticalAlignment="Top" FontSize="16"/>
                     <Label Content="Esta acción no se podrá deshacer." HorizontalAlignment="Left" Margin="179,80,0,0" VerticalAlignment="Top"/>
-                    <Button Content="Eliminar" HorizontalAlignment="Left" Margin="650,138,0,0" VerticalAlignment="Top" Width="114" Height="29"/>
+                    <Button Content="Eliminar" HorizontalAlignment="Left" Margin="650,138,0,0" VerticalAlignment="Top" Width="114" Height="29" Click="Button_Click_3"/>
                 </Grid>
             </TabItem>
         </TabControl>
-        <DataGrid HorizontalAlignment="Left" Height="187" Grid.Row="1" VerticalAlignment="Top" Width="780" Margin="10,0,0,0" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <DataGrid IsReadOnly="True" x:Name="gridProd" HorizontalAlignment="Left" Height="187" Grid.Row="1" VerticalAlignment="Top" Width="780" Margin="10,0,0,0" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Button Content="Atrás" HorizontalAlignment="Left" Margin="715,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_4"/>
     </Grid>
 </Page>

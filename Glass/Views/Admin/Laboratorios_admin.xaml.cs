@@ -20,9 +20,16 @@ namespace Glass.Views.Admin
     /// </summary>
     public partial class Laboratorios_admin : Page
     {
-        public Laboratorios_admin()
-        {
-            InitializeComponent();
-        }
-    }
+		private MainWindow Window { get; }
+		public Laboratorios_admin(MainWindow w)
+		{
+			Window = w;
+			InitializeComponent();
+		}
+
+		private void Button_Click_4(Object sender, RoutedEventArgs e)
+		{
+			Window.NavFrame.GoBack();
+		}
+	}
 }

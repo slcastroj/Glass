@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Glass"
         mc:Ignorable="d"
-        Title="Lol" Height="50" Width="137">
+        Title="Farmacia Concepción - Administrativo" Height="50" Width="137">
     <Frame Name="NavFrame">
 
     </Frame>

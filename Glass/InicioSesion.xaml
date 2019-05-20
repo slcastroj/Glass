@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Glass"
       mc:Ignorable="d"
-      Title="InicioSesion" Height="111.702" Width="281.383">
+      Title="InicioSesion" Height="111.702" Width="281.383" Loaded="Page_Loaded">
 
     <Grid>
         <Label Content="RUT" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="69"/>

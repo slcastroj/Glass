@@ -20,9 +20,16 @@ namespace Glass.Views.Admin
     /// </summary>
     public partial class Compras_admin : Page
     {
-        public Compras_admin()
-        {
-            InitializeComponent();
-        }
-    }
+		private MainWindow Window { get; }
+		public Compras_admin(MainWindow w)
+		{
+			Window = w;
+			InitializeComponent();
+		}
+
+		private void Button_Click_4(Object sender, RoutedEventArgs e)
+		{
+			Window.NavFrame.GoBack();
+		}
+	}
 }

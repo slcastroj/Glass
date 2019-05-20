@@ -14,6 +14,9 @@ namespace Glass
 
         public readonly Boolean IsMock = false;
         public readonly Int32 RolMock = 2;
+		public readonly Boolean AutoLogin = false;
+		public readonly String Rut = "";
+		public readonly String Pass = "";
 
         public ContextoServicio Contexto { get; }
         public Sesion Sesion { get; }

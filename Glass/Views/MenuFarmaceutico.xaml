@@ -8,21 +8,21 @@
       Title="MenuFarmaceutico" Height="108" Width="482">
 
     <Grid>
-        <Button HorizontalAlignment="Left" Margin="38,10,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="{x:Null}" BorderBrush="#FF7C7C7C">
+        <Button HorizontalAlignment="Left" Margin="38,10,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="{x:Null}" BorderBrush="#FF7C7C7C" Click="Button_Click_3">
             <Grid>
                 <TextBlock Text="&#xf15c;" FontSize="38" FontFamily="{StaticResource faRegular}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Margin="17,6,18,30" Width="40" TextAlignment="Center"/>
                 <Label Content="Reservas" Margin="10,46,10,4"/>
             </Grid>
         </Button>
 
-        <Button Margin="158,10,244,0" VerticalAlignment="Top" Height="80" Background="{x:Null}" BorderBrush="#FF7C7C7C">
+        <Button Margin="158,10,244,0" VerticalAlignment="Top" Height="80" Background="{x:Null}" BorderBrush="#FF7C7C7C" Click="Button_Click_2">
             <Grid>
                 <TextBlock Text="&#xf007;" FontSize="38" FontFamily="{StaticResource faRegular}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Margin="17,6,18,30" Width="40" TextAlignment="Center"/>
                 <Label Content="Usuarios" Margin="10,46,10,4"/>
             </Grid>
         </Button>
 
-        <Button HorizontalAlignment="Left" Margin="278,10,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="{x:Null}" BorderBrush="#FF7C7C7C">
+        <Button HorizontalAlignment="Left" Margin="278,10,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="{x:Null}" BorderBrush="#FF7C7C7C" Click="Button_Click_1">
             <Grid>
                 <TextBlock Text="&#xf1b3;" FontSize="38" FontFamily="{StaticResource faSolid}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Margin="17,6,18,30" Width="40" TextAlignment="Center"/>
                 <Label Content="Productos" Margin="5,46,5,4"/>
