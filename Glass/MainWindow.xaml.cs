@@ -10,7 +10,7 @@ namespace Glass
     /// </summary>
     public partial class MainWindow : Window
     {
-        private const String UrlFox = "http://sheemin.club/api/v1";
+        private const String UrlFox = "http://localhost:80/api/v1";
 
         public readonly Boolean IsMock = false;
         public readonly Int32 RolMock = 2;
